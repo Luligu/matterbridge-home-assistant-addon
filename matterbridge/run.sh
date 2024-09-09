@@ -11,7 +11,7 @@ MATTERBRIDGE_PLUGINS=$HOME_DIR/Matterbridge   # For matterbridge plugins
 MATTERBRIDGE_STORAGE=$HOME_DIR/.matterbridge  # For matterbridge storage
 
 # Create directories if they don't exist
-mkdir -p $BASE_DIR
+mkdir -p $HOME_DIR
 mkdir -p $MATTERBRIDGE_PLUGINS
 mkdir -p $MATTERBRIDGE_STORAGE
 
