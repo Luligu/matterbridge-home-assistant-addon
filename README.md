@@ -48,3 +48,6 @@ Click on **BUILD** or **REBUILD**.
 In the Configuration page you can change the default port 8283.
 
 To open the frontend click on **OPEN WEB UI**.
+
+![image](https://github.com/user-attachments/assets/1c09c1a4-41b5-41ed-924e-1f1086140b50)
+
