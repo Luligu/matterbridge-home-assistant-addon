@@ -16,4 +16,4 @@ mkdir -p $MATTERBRIDGE_PLUGINS
 mkdir -p $MATTERBRIDGE_STORAGE
 
 # Start Matterbridge with the frontend port specified
-matterbridge -docker -frontend $FRONTEND_PORT -mdnsinterface end0 -homedir $HOME_DIR
+matterbridge -docker -frontend $FRONTEND_PORT -homedir $HOME_DIR
