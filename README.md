@@ -39,7 +39,7 @@ https://github.com/Luligu/matterbridge-home-assistant-addon
 
 then click on **ADD**.
 
-You should now see your Matterbridge add-on in the store and be able to install it.
+You should now see your Matterbridge add-on in the store and be able to **INSTALL** it.
 
 Enable **Start on boot**, **Watchdog** and **Auto update**.
 
