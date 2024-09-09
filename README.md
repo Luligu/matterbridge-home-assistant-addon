@@ -29,7 +29,7 @@ The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian wit
 
 ## How to install
 
-From you **Home Assistant** web page, go to **Settings**, select **Add-ons** and click on the **ADD-ON STORE** button.
+From your **Home Assistant** web page, go to **Settings**, select **Add-ons** and click on the **ADD-ON STORE** button.
 
 In the upper right corner click on the **three dots menu**, select **Repositories** and paste this link
 
@@ -39,7 +39,7 @@ https://github.com/Luligu/matterbridge-home-assistant-addon
 
 then click on **ADD**.
 
-You should now see your Matterbridge add-on in the store and be able to **INSTALL** it.
+You should now see your Matterbridge add-on in the add-on store and be able to **INSTALL** it.
 
 Enable **Start on boot**, **Watchdog** and **Auto update**.
 
