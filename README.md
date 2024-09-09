@@ -40,3 +40,11 @@ https://github.com/Luligu/matterbridge-home-assistant-addon
 then click on **ADD**.
 
 You should now see your Matterbridge add-on in the store and be able to install it.
+
+Enable **Start on boot**, **Watchdog** and **Auto update**.
+
+Click on **BUILD** or **REBUILD**.
+
+In the Configuration page you can change the default port 8283.
+
+To open the frontend click on **OPEN WEB UI**.
