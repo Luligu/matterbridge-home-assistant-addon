@@ -11,13 +11,6 @@
     },
     "map": [
         "addons:rw",
-        "addon_config:rw",
-        "addon_configs:rw",
-        "all_addon_configs:rw",
-        "backup:rw",
-        "homeassistant_config:rw",
-        "config:rw",
-        "media:rw",
         "share:rw"
     ],
     "options": {
