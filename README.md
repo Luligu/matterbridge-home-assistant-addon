@@ -21,7 +21,7 @@ This repository contains the Matterbridge Official Home Assistant Add-on.
 
 It allows you to run Matterbridge as an Home Assistant Add-on.
 
-All Matterbridge features are correctly working in the official add-on (you can now update Matterbridge itself or the plugins without issues). 
+All Matterbridge features are correctly working in the official add-on (e.g. you can update Matterbridge itself or the plugins without issues). 
 
 The Matterbridge storage and the Matterbridge plugins storage persist when you update the Add-on, rebuild or restart it.
 
