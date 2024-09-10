@@ -23,7 +23,9 @@ It allows you to run Matterbridge as an Home Assistant Add-on.
 
 All Matterbridge features are correctly working in the official add-on (e.g. you can update Matterbridge itself or the plugins without issues). 
 
-The Matterbridge storage and the Matterbridge plugins storage persist when you update the Add-on, rebuild or restart it.
+The Matterbridge storage and the Matterbridge plugins storage persist when you update the Add-on, rebuild or restart it. 
+
+When you rebuild the add-on, Matterbridge will reload all plugins that were registered.
 
 The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian with Nodejs 22.
 
@@ -40,6 +42,8 @@ https://github.com/Luligu/matterbridge-home-assistant-addon
 then click on **ADD**.
 
 You should now see your Matterbridge add-on in the add-on store and be able to **INSTALL** it.
+
+Be patient cause it can takes a few minutes.
 
 Enable **Start on boot**, **Watchdog** and **Auto update**.
 
