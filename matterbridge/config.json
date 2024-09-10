@@ -1,6 +1,6 @@
 {
     "name": "Matterbridge Official Home Assistant Add-on",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "slug": "matterbridge",
     "description": "Official Home Assistant Add-on for Matterbridge",
     "url": "https://github.com/Luligu/matterbridge-home-assistant-addon",
