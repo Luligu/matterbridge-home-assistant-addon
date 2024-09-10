@@ -47,7 +47,7 @@ Click on **BUILD** or **REBUILD**.
 
 In the Configuration page you can change the default port 8283.
 
-To open the frontend click on **OPEN WEB UI**.
+To open the Matterbridge frontend click on **OPEN WEB UI**.
 
 ## How to configure the mdns
 
