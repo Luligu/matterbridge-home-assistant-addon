@@ -49,5 +49,15 @@ In the Configuration page you can change the default port 8283.
 
 To open the frontend click on **OPEN WEB UI**.
 
+## How to configure the mdns
+
+Since Home Assistant exposes a lot of interfaces to the containers, is better to set the matter mdns interface in the Matterbridge Settings page.
+
+![image](https://github.com/user-attachments/assets/bdaa91ea-4c87-4aeb-9cec-dd99be0ec8dc)
+
+You can get the correct interface name from the Network page in the settings of Home Assistant.
+
+In this case the correct name is end0.
+
 ![image](https://github.com/user-attachments/assets/1c09c1a4-41b5-41ed-924e-1f1086140b50)
 
