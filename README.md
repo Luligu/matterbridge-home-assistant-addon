@@ -15,7 +15,7 @@
 If you like this project and find it useful, please consider giving it a star on GitHub at https://github.com/Luligu/matterbridge-home-assistant-addon and sponsoring it.
 
 
-# Matterbridge Official Home Assistant Add-on
+# Matterbridge Home Assistant Add-on
 
 This repository contains the Matterbridge Official Home Assistant Add-on. 
 
