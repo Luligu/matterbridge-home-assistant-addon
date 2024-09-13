@@ -25,9 +25,9 @@ All Matterbridge features are correctly working in the official add-on (e.g. you
 
 The Matterbridge storage and the Matterbridge plugins storage persist when you update the Add-on, rebuild or restart it. 
 
-When you rebuild the add-on, Matterbridge will reload all plugins that were registered.
+When you build/rebuild the add-on, Matterbridge will reload all plugins that were registered (it takes time so be patient).
 
-The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian with Nodejs 22.
+The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian 12 (bookworm-slim) with Nodejs 22.
 
 ## How to install
 
@@ -48,8 +48,6 @@ Be patient cause it can takes a few minutes.
 Enable **Start on boot**, **Watchdog** and **Auto update**.
 
 Click on **BUILD** or **REBUILD**.
-
-In the Configuration page you can change the default port 8283.
 
 To open the Matterbridge frontend click on **OPEN WEB UI**.
 

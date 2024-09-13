@@ -1,20 +1,3 @@
-# ![Matterbridge Logo](https://github.com/Luligu/matterbridge/blob/main/frontend/public/matterbridge%2064x64.png) Matterbridge 
-
-[![npm version](https://img.shields.io/npm/v/matterbridge.svg)](https://www.npmjs.com/package/matterbridge)
-[![npm downloads](https://img.shields.io/npm/dt/matterbridge.svg)](https://www.npmjs.com/package/matterbridge)
-[![Docker Version](https://img.shields.io/docker/v/luligu/matterbridge?label=docker%20version&sort=semver)](https://hub.docker.com/r/luligu/matterbridge)
-[![Docker Pulls](https://img.shields.io/docker/pulls/luligu/matterbridge.svg)](https://hub.docker.com/r/luligu/matterbridge)
-![Node.js CI](https://github.com/Luligu/matterbridge/actions/workflows/build.yml/badge.svg)
-
-[![power by](https://img.shields.io/badge/powered%20by-matter--history-blue)](https://www.npmjs.com/package/matter-history)
-[![power by](https://img.shields.io/badge/powered%20by-node--ansi--logger-blue)](https://www.npmjs.com/package/node-ansi-logger)
-[![power by](https://img.shields.io/badge/powered%20by-node--persist--manager-blue)](https://www.npmjs.com/package/node-persist-manager)
-
----
-
-If you like this project and find it useful, please consider giving it a star on GitHub at https://github.com/Luligu/matterbridge-home-assistant-addon and sponsoring it.
-
-
 # Matterbridge Home Assistant Add-on
 
 This repository contains the Matterbridge Official Home Assistant Add-on. 
@@ -25,9 +8,9 @@ All Matterbridge features are correctly working in the official add-on (e.g. you
 
 The Matterbridge storage and the Matterbridge plugins storage persist when you update the Add-on, rebuild or restart it. 
 
-When you rebuild the add-on, Matterbridge will reload all plugins that were registered.
+When you build/rebuild the add-on, Matterbridge will reload all plugins that were registered (it takes time so be patient).
 
-The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian with Nodejs 22.
+The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian 12 (bookworm-slim) with Nodejs 22.
 
 ## How to install
 
@@ -48,8 +31,6 @@ Be patient cause it can takes a few minutes.
 Enable **Start on boot**, **Watchdog** and **Auto update**.
 
 Click on **BUILD** or **REBUILD**.
-
-In the Configuration page you can change the default port 8283.
 
 To open the Matterbridge frontend click on **OPEN WEB UI**.
 

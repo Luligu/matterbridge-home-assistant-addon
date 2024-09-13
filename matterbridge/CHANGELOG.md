@@ -6,6 +6,9 @@ If you like this project and find it useful, please consider giving it a star on
 
 # Changelog
 
+## 1.0.2 - 2024-09-13
+- Added Ingress and side panel (beta).
+
 ## 1.0.1 - 2024-09-10
 - Added CHANGELOG.md.
 - Update README.md.

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the frontend port from the config.json or default to 8283
-FRONTEND_PORT=${FRONTEND_PORT:-8283}
+FRONTEND_PORT=${INGRESS_PORT:-8283}
 
 # Define the base directory for Matterbridge
 HOME_DIR=/addons/matterbridge
@@ -16,4 +16,4 @@ mkdir -p $MATTERBRIDGE_PLUGINS
 mkdir -p $MATTERBRIDGE_STORAGE
 
 # Start Matterbridge with the frontend port specified
-matterbridge -docker -frontend $FRONTEND_PORT -homedir $HOME_DIR
+matterbridge -docker -ingress -frontend $FRONTEND_PORT -homedir $HOME_DIR

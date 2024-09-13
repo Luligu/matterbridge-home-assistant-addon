@@ -1,30 +1,27 @@
 {
     "name": "Matterbridge Home Assistant Add-on",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "slug": "matterbridge",
-    "description": "Official Home Assistant Add-on for Matterbridge",
+    "description": "Official Matterbridge Home Assistant Add-on",
     "url": "https://github.com/Luligu/matterbridge-home-assistant-addon",
     "startup": "application",
     "boot": "auto",
-    "ex_ports": {
+    "ingress": true,
+    "ingress_port": 8283,
+    "ports": {
         "8283/tcp": 8283
     },
+    "panel_icon": "mdi:bridge",
+    "panel_title": "Matterbridge",
     "map": [
         "addons:rw",
         "share:rw"
     ],
-    "options": {
-        "frontend_port": 8283
-    },
-    "schema": {
-        "frontend_port": "int"
-    },
     "arch": [
         "amd64",
         "aarch64",
         "armv7"
     ],
-    "webui": "http://[HOST]:[PORT:8283]",
     "host_network": true,
     "restart": "always"
 }
