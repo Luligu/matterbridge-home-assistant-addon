@@ -6,6 +6,10 @@ If you like this project and find it useful, please consider giving it a star on
 
 # Changelog
 
+## 1.0.3 - 2024-09-15
+- Added fixed hostname.
+- Added badge in the README.md to fast add the add-on.
+
 ## 1.0.2 - 2024-09-13
 - Added Ingress and side panel (beta).
 
