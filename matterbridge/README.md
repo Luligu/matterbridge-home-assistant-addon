@@ -14,7 +14,11 @@ The Add-on can run on arm64, amd64 armv7 archs. The image is build on Debian 12 
 
 ## How to install
 
-From your **Home Assistant** web page, go to **Settings**, select **Add-ons** and click on the **ADD-ON STORE** button.
+Click here 
+
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2FLuligu%2Fmatterbridge-home-assistant-addon)
+
+or from your **Home Assistant** web page, go to **Settings**, select **Add-ons** and click on the **ADD-ON STORE** button.
 
 In the upper right corner click on the **three dots menu**, select **Repositories** and paste this link
 
