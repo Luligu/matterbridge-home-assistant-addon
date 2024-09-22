@@ -15,5 +15,10 @@ mkdir -p $HOME_DIR
 mkdir -p $MATTERBRIDGE_PLUGINS
 mkdir -p $MATTERBRIDGE_STORAGE
 
-# Start Matterbridge with the frontend port specified
-matterbridge -docker -ingress -frontend $FRONTEND_PORT -homedir $HOME_DIR
+# Start Matterbridge in a loop to handle restarts internally in the same container
+while true; do
+    echo "Starting Matterbridge..."
+    matterbridge -docker -ingress -frontend $FRONTEND_PORT -homedir $HOME_DIR
+    echo "Matterbridge process exited. Restarting in 5 seconds..."
+    sleep 5
+done

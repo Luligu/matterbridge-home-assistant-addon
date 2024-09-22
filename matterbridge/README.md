@@ -50,6 +50,4 @@ In this case the correct name is end0.
 
 ![image](https://github.com/user-attachments/assets/1c09c1a4-41b5-41ed-924e-1f1086140b50)
 
-## Known issues with Ingress
 
-- Download is not currently working
