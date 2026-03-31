@@ -45,3 +45,7 @@ The Application can run on `arm64` and `amd64` archs (`armv7` arch has been [dep
 The image (luligu/matterbridge:s6-rc) is built on **Debian 13** (trixie-slim) with **Node.js 24** and integrates the **s6-rc overlay** system.
 
 Visit the [Documentation page](DOCS.md) for more information.
+
+## Install
+
+[![Open your Home Assistant instance and show the dashboard of an app.](https://my.home-assistant.io/badges/supervisor_addon.svg)](https://my.home-assistant.io/redirect/supervisor_addon/?repository_url=https%3A%2F%2Fgithub.com%2FLuligu%2Fmatterbridge-home-assistant-addon&addon=246dd49f_matterbridge)
