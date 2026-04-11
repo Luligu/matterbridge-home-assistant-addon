@@ -8,6 +8,16 @@ If you like this project and find it useful, please consider giving it a star on
 
 # Changelog
 
+## 2026.4.2 - 2026-04-10
+
+- Updated matterbridge to [3.7.3](https://matterbridge.io/CHANGELOG.html#373-2026-04-10).
+- Updated matterbridge-hass to [1.1.0](https://github.com/Luligu/matterbridge-hass/blob/main/CHANGELOG.md#110---2026-04-10).
+
+## 2026.4.1 - 2026-04-02
+
+- Updated matterbridge to [3.7.2](https://matterbridge.io/CHANGELOG.html#372-2026-04-02).
+- Updated matterbridge-hass to [1.0.12](https://github.com/Luligu/matterbridge-hass/blob/main/CHANGELOG.md#1012---2026-04-02).
+
 ## 2026.3.4 - 2026-03-27
 
 - Updated matterbridge to [3.7.1](https://matterbridge.io/CHANGELOG.html#371-2026-03-27).
