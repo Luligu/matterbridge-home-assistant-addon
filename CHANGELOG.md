@@ -9,6 +9,10 @@ If you like this project and find it useful, please consider giving it a star on
 # Changelog
 
 
+## 2026.9.4 - 2026-09-25
+
+- Updated matterbridge to [3.10.11](https://matterbridge.io/CHANGELOG.html#31011-2026-09-25).
+
 ## 2026.9.3 - 2026-09-18
 
 - Updated matterbridge to [3.10.10](https://matterbridge.io/CHANGELOG.html#31010-2026-09-18).
