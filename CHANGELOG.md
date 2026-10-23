@@ -9,6 +9,30 @@ If you like this project and find it useful, please consider giving it a star on
 # Changelog
 
 
+## 2026.10.4 - 2026-10-23
+
+- Updated matterbridge to [3.11.0](https://matterbridge.io/CHANGELOG.html#3110-2026-10-23).
+- Updated matterbridge-hass to [1.6.0](https://github.com/Luligu/matterbridge-hass/blob/main/CHANGELOG.md#160---2026-10-23).
+- Updated matterbridge-zigbee2mqtt to [3.3.0](https://github.com/Luligu/matterbridge-zigbee2mqtt/blob/main/CHANGELOG.md#330---2026-10-23).
+- Updated matterbridge-shelly to [2.8.0](https://github.com/Luligu/matterbridge-shelly/blob/main/CHANGELOG.md#280---2026-10-23).
+- Updated matterbridge-somfy-tahoma to [1.7.0](https://github.com/Luligu/matterbridge-somfy-tahoma/blob/main/CHANGELOG.md#170---2026-10-23).
+- Updated matterbridge-irobot to [0.4.0](https://github.com/Luligu/matterbridge-irobot/blob/main/CHANGELOG.md#040---2026-10-23).
+- Updated matterbridge-bthome to [1.3.0](https://github.com/Luligu/matterbridge-bthome/blob/main/CHANGELOG.md#130---2026-10-23).
+- Updated matterbridge-mqtt to [0.1.0](https://github.com/Luligu/matterbridge-mqtt/blob/main/CHANGELOG.md#010---2026-10-23).
+- Updated matterbridge-security to [1.3.0](https://github.com/Luligu/matterbridge-security/blob/main/CHANGELOG.md#130---2026-10-23).
+- Updated matterbridge-webhooks to [1.4.0](https://github.com/Luligu/matterbridge-webhooks/blob/main/CHANGELOG.md#140---2026-10-23).
+- Updated matterbridge-camera to [1.0.1](https://github.com/Luligu/matterbridge-camera/blob/main/CHANGELOG.md#101---2026-10-23).
+- Updated matterbridge-webcam to [1.0.1](https://github.com/Luligu/matterbridge-webcam/blob/main/CHANGELOG.md#101---2026-10-23).
+- Updated matterbridge-eve-door to [3.1.0](https://github.com/Luligu/matterbridge-eve-door/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-eve-energy to [3.1.0](https://github.com/Luligu/matterbridge-eve-energy/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-eve-motion to [3.1.0](https://github.com/Luligu/matterbridge-eve-motion/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-eve-room to [3.1.0](https://github.com/Luligu/matterbridge-eve-room/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-eve-weather to [3.1.0](https://github.com/Luligu/matterbridge-eve-weather/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-example-accessory-platform to [3.1.0](https://github.com/Luligu/matterbridge-example-accessory-platform/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-example-camera to [1.0.0](https://github.com/Luligu/matterbridge-example-camera/blob/main/CHANGELOG.md#100---2026-10-23).
+- Updated matterbridge-example-dynamic-platform to [3.1.0](https://github.com/Luligu/matterbridge-example-dynamic-platform/blob/main/CHANGELOG.md#310---2026-10-23).
+- Updated matterbridge-test to [3.1.0](https://github.com/Luligu/matterbridge-test/blob/main/CHANGELOG.md#310---2026-10-23).
+
 ## 2026.10.3 - 2026-10-16
 
 - Updated matterbridge to [3.10.14](https://matterbridge.io/CHANGELOG.html#31014-2026-10-16).
