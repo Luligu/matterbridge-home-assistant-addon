@@ -76,6 +76,8 @@
    - no "legacy map type" warning in the Supervisor log.
 
 6. **Later release** — remove the `local_apps` entry from `map` once the migration has been out long enough.
+   - Remove the migration block from the run script in the same release.
+   - The old `/addons/matterbridge` folder stays on disk (nothing removes it): the release notes can tell the users they may delete it.
 
 ### Notes
 
@@ -83,3 +85,4 @@
 - The saved plugin paths are absolute, but the plugin manager re-resolves a missing path to the global modules folder or to `Matterbridge/<plugin name>`.
 - A downgrade to a version before the migration uses the old `/addons/matterbridge` copy: pairings made after the migration are missing there.
 - Backups made before the migration do not contain the Matterbridge data (same as today).
+- Until the later release, an uninstall with "remove data" also deletes the marker in `/config`, while `/addons/matterbridge` is never touched (read-only mount, and the uninstall does not clean `local_apps`). The next install copies the old data again: Matterbridge starts with the identity, plugins and pairings from before the migration, and everything changed after the migration is missing. Deleting `/addons/matterbridge` by hand gives an empty bridge instead.
