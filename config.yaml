@@ -1,5 +1,5 @@
 name: Matterbridge
-version: 2026.10.5
+version: 2026.11.1
 slug: matterbridge
 description: Matterbridge Home Assistant Application
 url: "https://github.com/Luligu/matterbridge-home-assistant-addon"
@@ -18,7 +18,9 @@ ingress: true
 ingress_port: 8283
 
 map:
-  - addons:rw
+  - type: local_apps
+    read_only: false
+    path: /addons
 
 host_network: true
 startup: services

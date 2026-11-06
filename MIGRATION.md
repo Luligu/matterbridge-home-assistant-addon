@@ -1,10 +1,43 @@
 # Migration
 
+## Interim step: replace `addons` with `local_apps` at the same path
+
+### Why
+
+- It removes the Supervisor warning "uses legacy map type 'addons'; use 'local_apps' instead".
+- `local_apps` mounts the same host folder (the Supervisor local apps folder) as `addons` did. With `path: /addons` the container still sees it at `/addons`, so `HOME_DIR=/addons/matterbridge` keeps working.
+- No image change, no run script change, no data copy: only config.yaml changes, so it is easy to revert.
+
+### What it does not change
+
+- The data is still **not included in the app backup** (that needs the `app_config` move below).
+- The data still survives an uninstall with "remove data".
+
+### Change (one release, together with the legacy app)
+
+`config.yaml` — replace `addons:rw` with:
+
+```yaml
+map:
+  - type: local_apps
+    read_only: false
+    path: /addons
+```
+
+- Requires Supervisor **2026.07.1** or later (see Requirement below): an older Supervisor drops the app from the store.
+- Use the object form with `path: /addons`, never the bare `local_apps:rw` string (an older Supervisor silently skips it and the data is not mounted).
+- Bump `version:`, add the CHANGELOG entry, and note in README.md and DOCS.md that Supervisor 2026.07.1 or later is required.
+- Test: the app starts, plugins, pairings and certificates are there, no "legacy map type" warning in the Supervisor log.
+
+### Effect on the later move
+
+Step 2 below then only adds the `app_config` entry and switches the `local_apps` entry to `read_only: true`. The `/addons` path and `OLD_HOME_DIR` stay the same.
+
 ## Move the Matterbridge data from `addons` to `app_config`
 
 ### Why
 
-- The app maps `addons:rw` and the image keeps all the Matterbridge data (plugins, `.matterbridge` storage, `.mattercert`) in `/addons/matterbridge`.
+- Before the interim step the app maps `addons:rw` (after it `local_apps` at `/addons`), and the image keeps all the Matterbridge data (`Matterbridge` plugins, `.matterbridge` storage, `.mattercert` certification) in `/addons/matterbridge`.
 - That folder is the Supervisor local apps folder: it is **not included in the app backup**.
 - The `addons` map type is deprecated since Supervisor 2026.07 (the Supervisor logs "uses legacy map type 'addons'; use 'local_apps' instead").
 - The `app_config` map type mounts a folder reserved to this app (host `addon_configs/<id>_matterbridge`) at `/config`. It is **included in the app backup** and restored with it, and it stays visible to the users (Samba, File editor).
@@ -48,7 +81,7 @@
 
    The rest of the script already uses `$HOME_DIR` (plugins, storage, certificates, `--homedir` and the lock file cleanup), so nothing else changes.
 
-2. **config.yaml** — replace `addons:rw` with:
+2. **config.yaml** — replace the `map` (`addons:rw`, or the interim `local_apps` entry) with:
 
    ```yaml
    map:

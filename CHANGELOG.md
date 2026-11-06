@@ -9,6 +9,14 @@ If you like this project and find it useful, please consider giving it a star on
 # Changelog
 
 
+## 2026.11.1 - 2026-11-06
+
+- Updated matterbridge to [3.11.2](https://matterbridge.io/CHANGELOG.html#3112-2026-11-06).
+- Replaced the deprecated `addons` map type with `local_apps` mounted at the same path (`/addons`). This removes the Supervisor warning "uses legacy map type 'addons'". The Matterbridge data stays in `/addons/matterbridge`.
+
+> [!WARNING]
+> This release requires Supervisor **2026.07.1** or later. Update the Supervisor before updating the app: on an older Supervisor the app disappears from the store (the installed version keeps running with its data).
+
 ## 2026.10.5 - 2026-10-30
 
 - Updated matterbridge to [3.11.1](https://matterbridge.io/CHANGELOG.html#3111-2026-10-30).
