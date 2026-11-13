@@ -119,3 +119,24 @@ Step 2 below then only adds the `app_config` entry and switches the `local_apps`
 - A downgrade to a version before the migration uses the old `/addons/matterbridge` copy: pairings made after the migration are missing there.
 - Backups made before the migration do not contain the Matterbridge data (same as today).
 - Until the later release, an uninstall with "remove data" also deletes the marker in `/config`, while `/addons/matterbridge` is never touched (read-only mount, and the uninstall does not clean `local_apps`). The next install copies the old data again: Matterbridge starts with the identity, plugins and pairings from before the migration, and everything changed after the migration is missing. Deleting `/addons/matterbridge` by hand gives an empty bridge instead.
+
+## Upgrade `s6-overlay` from `3.2.2.0` to `3.2.3.2`
+
+### Why
+
+- Matches `home-assistant/docker-base`, which uses `S6_OVERLAY_VERSION=3.2.3.2`.
+- Updates the underlying `skarnet.org` stack (`skalibs`, `execline`, `s6`, `s6-rc`, `s6-linux-init`), fixes `user` / `user2` bundle resolution and `logutil-service-main`, and improves `/run` permission handling in restricted containers.
+
+### Changes (in the `matterbridge` repo)
+
+1. **`docker/Dockerfile.s6-rc` and `docker/Dockerfile.s6-rc-legacy`**:
+   - Bump `ARG S6_OVERLAY_VERSION=3.2.3.2`.
+
+2. **`docker/rootfs/etc/s6-overlay/`**:
+   - Move `s6-rc.d/user/contents.d/matterbridge` to `user-bundles.d/user/contents.d/matterbridge` and remove `s6-rc.d/user`.
+   - Starting with `3.2.3.2`, defining `user` under `s6-rc.d/` logs a deprecation warning because `user` and `user2` moved to `user-bundles.d/`.
+   - Note: when layering `3.2.3.2` on top of an existing `3.2.2.0` image (e.g. in a local test `Dockerfile`), both `s6-rc.d/user` and `s6-rc.d/user2` from `3.2.2.0` must be removed after copying `contents.d/` so `s6-rc-compile` does not fail with `duplicate service definition: user2`.
+
+### Verification
+
+- Verified locally in Docker and in Home Assistant OS (`ha-mac`) with `Matterbridge (local)` on top of `luligu/matterbridge:2026.11.2`: `s6-rc-compile` loads `/etc/s6-overlay/user-bundles.d` and `/package/admin/s6-overlay-3.2.3.2/etc/s6-rc/sources`, and `matterbridge` starts cleanly with no deprecation warnings.
