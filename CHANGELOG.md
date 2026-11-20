@@ -8,22 +8,30 @@ If you like this project and find it useful, please consider giving it a star on
 
 # Changelog
 
+> [!WARNING]
+> This release requires Supervisor **2026.07.1** or later. Update the Supervisor before updating the app: on an older Supervisor the app disappears from the store (the installed version keeps running with its data).
+
+
+## 2026.11.3 - 2026-11-20
+
+- Updated matterbridge to [3.11.4](https://matterbridge.io/CHANGELOG.html#3114-2026-11-20).
+- Updated matterbridge-hass to [1.7.0](https://github.com/Luligu/matterbridge-hass/blob/main/CHANGELOG.md#170---2026-11-14): cover tilt support, speed feature and closed state on covers, fixed position on covers without `current_position`, stale `off` on thermostats switching to `auto`, and duplicate name detection. ⚠️ The deprecated `splitEntities` is removed, use `splitByLabel` instead.
+- Updated matterbridge-zigbee2mqtt to [3.3.2](https://github.com/Luligu/matterbridge-zigbee2mqtt/blob/main/CHANGELOG.md#332---2026-11-14): new `valveList` and `pumpList` to expose binary switches as Matter valves and pumps; duplicate modifiers are removed at startup.
+- Updated matterbridge-shelly to [2.8.2](https://github.com/Luligu/matterbridge-shelly/blob/main/CHANGELOG.md#282---2026-11-14): friendly Total / Phase A/B/C labels on triphase energy meters, firmware build as hardware version string, Grid/Battery tags on power supplies.
+- Updated matterbridge-somfy-tahoma to [1.7.3](https://github.com/Luligu/matterbridge-somfy-tahoma/blob/main/CHANGELOG.md#173---2026-11-14): logger level changes apply to all devices; security fix for the transitive `axios`.
+- Updated matterbridge-security to [1.3.1](https://github.com/Luligu/matterbridge-security/blob/main/CHANGELOG.md#131---2026-11-13): selectable timeline and daily total graphs, event history retention up to 1000 events, fixed the event history fetch behind Home Assistant Ingress.
+- Updated s6-overlay from 3.2.2.0 to 3.2.3.2 and moved the `user` bundle to `user-bundles.d`.
+- Added a migration check at startup that logs the `/config`, `/addons` and `/data` mounts and the `/config` contents, to prepare for migrating Matterbridge data to `/config`.
 
 ## 2026.11.2 - 2026-11-13
 
 - Updated matterbridge to [3.11.3](https://matterbridge.io/CHANGELOG.html#3113-2026-11-13).
 - Added `app_config` map in `config.yaml` to prepare for migrating Matterbridge data to `/config`.
 
-> [!WARNING]
-> This release requires Supervisor **2026.07.1** or later. Update the Supervisor before updating the app: on an older Supervisor the app disappears from the store (the installed version keeps running with its data).
-
 ## 2026.11.1 - 2026-11-06
 
 - Updated matterbridge to [3.11.2](https://matterbridge.io/CHANGELOG.html#3112-2026-11-06).
 - Replaced the deprecated `addons` map type with `local_apps` mounted at the same path (`/addons`). This removes the Supervisor warning "uses legacy map type 'addons'". The Matterbridge data stays in `/addons/matterbridge`.
-
-> [!WARNING]
-> This release requires Supervisor **2026.07.1** or later. Update the Supervisor before updating the app: on an older Supervisor the app disappears from the store (the installed version keeps running with its data).
 
 ## 2026.10.5 - 2026-10-30
 
